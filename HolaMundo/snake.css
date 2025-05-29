@@ -1,0 +1,139 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    background-image: url("https://images.unsplash.com/photo-1470058869958-2a77ade41c02?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8Zm9uZG8lMjBkZSUyMHNlbHZhfGVufDB8fDB8fHww");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #e3f2fd;
+
+}
+
+.wrapper {
+    width: 65vmin;
+    height: 70vmin;
+    display: flex;
+    overflow: hidden;
+    flex-direction: column;
+    border-radius: 5px;
+    background: #365828;
+}
+
+.game-details{
+    color: #e3f2fd;
+    font-size: 1.2rem;
+    font-weight: 500;
+    padding: 20px 27px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.play-board {
+    width: 100%;
+    height: 100%;
+    background-color: #6faf73;
+    display: grid;
+    grid-template: repeat(30, 1fr) / repeat(30, 1fr);
+}
+
+.play-board .food {
+    background: #ff003d;
+    width: 2vmin;
+    height: 2vmin;
+}
+
+.play-board .head {
+    background: green;
+}
+
+.game-over-title {
+    font-size: 3rem;
+    color: #ff3b3b;
+    margin: 0 0 1rem 0;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: bold;
+  }
+
+  .game-over-popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: none; /* 🔒 Oculto por defecto */
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+  }
+  
+  .popup-content {
+    background: white;
+    padding: 2rem 3rem;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+    animation: popup-appear 0.4s ease-out;
+  }
+
+  .game-over-title {
+    font-size: 3rem;
+    color: #ff3b3b;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+  
+  .popup-content button {
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    background: #ff4444;
+    border: none;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  
+  .popup-content button:hover {
+    background: #b1b1b1;
+  }
+  
+
+  @keyframes popup-appear {
+    0% {
+      transform: scale(0.5);
+      opacity: 0;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+
+
+
+  .boton {
+    position: absolute;
+    top: 40px;
+    left: 30px;
+    width: 80px;
+    height: 50px;
+    font-family: 'Poppins', sans-serif;
+	  font-size: 22px;
+	  cursor: pointer;
+	  border-radius: 10px;
+	  background-color: #54a035;
+    color: white;
+  }
